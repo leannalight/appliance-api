@@ -6,12 +6,12 @@ const { AccessDeniedMsg } = require('../constants/constants');
 
 module.exports.createAppliance = (req, res, next) => {
   const {
-    title, timer, temperature, load,
+    title, programme, timer, temperature
   } = req.body;
   const owner = req.user._id;
 
   Appliance.create({
-    title, timer, temperature, load, owner,
+    title, programme, timer, temperature, owner,
   })
     .then((appliance) => res.status(201).send({ appliance: appliance.withoutOwner() }))
     .catch(next);

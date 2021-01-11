@@ -41,6 +41,6 @@ module.exports.removeCookie = (req, res, next) => {
     maxAge: -1,
     httpOnly: true,
   });
-  res.send({ message: 'You successfully signed out!' })
+  res.send({ message: 'You have been successfully signed out!' })
     .catch(() => next(new BadRequestError(ServerCannotProcessMsg)));
 };

@@ -5,15 +5,15 @@ const applianceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  programme: {
+    type: String,
+    required: true,
+  },
   timer: {
     type: String,
     required: true,
   },
   temperature: {
-    type: String,
-    required: true,
-  },
-  load: {
     type: String,
     required: true,
   },

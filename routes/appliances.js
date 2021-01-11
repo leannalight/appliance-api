@@ -10,9 +10,9 @@ router.get('/', auth, getAppliances);
 router.post('/', celebrate({
   body: Joi.object().keys({
     title: Joi.string().required(),
+    programme: Joi.string().required(),
     timer: Joi.string().required(),
     temperature: Joi.string().required(),
-    load: Joi.string().required(),
   }),
 }), auth, createAppliance);
 
